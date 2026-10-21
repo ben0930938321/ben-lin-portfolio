@@ -15,3 +15,6 @@ Separate real content into JSON and share one CSS and JavaScript implementation 
 ## Next review
 
 Ask the author to review image order, English translations, and desktop/mobile layouts. Record actual feedback and subsequent changes here. Do not claim reviews or revisions before they happen.
+
+## Gallery refinement
+The author requested tighter image spacing and mouse-wheel navigation based on an annotated screenshot. Secondary airport images now retain their natural width at a shared height, with a 10px desktop gap (8px on mobile). Hovering over the row converts wheel input into horizontal movement; page scrolling resumes at the ends. Touch scrolling and arrow buttons remain available.

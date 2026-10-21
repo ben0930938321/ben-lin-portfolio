@@ -41,8 +41,19 @@ try {
       [...gallery.children].slice(1).forEach(figure => strip.append(figure));
       const controls = document.createElement('div');
       controls.className = 'gallery-controls';
-      controls.innerHTML = '<span>MODEL PHOTOGRAPHS / Scroll to explore</span><div><button type="button" aria-label="Previous photographs">←</button><button type="button" aria-label="Next photographs">→</button></div>';
+      controls.innerHTML = '<span>MODEL PHOTOGRAPHS / Hover and scroll</span><div><button type="button" aria-label="Previous photographs">←</button><button type="button" aria-label="Next photographs">→</button></div>';
       controls.querySelectorAll('button').forEach((button, i) => button.addEventListener('click', () => strip.scrollBy({left: (i ? 1 : -1) * strip.clientWidth * .8, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'})));
+      strip.addEventListener('wheel', event => {
+        if (event.ctrlKey) return;
+        const delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
+        const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? strip.clientWidth : 1;
+        const distance = delta * unit;
+        const max = strip.scrollWidth - strip.clientWidth;
+        if ((distance > 0 && strip.scrollLeft < max - 1) || (distance < 0 && strip.scrollLeft > 1)) {
+          event.preventDefault();
+          strip.scrollLeft += distance;
+        }
+      }, {passive: false});
       gallery.append(controls, strip);
     }
   }
@@ -50,3 +61,4 @@ try {
   main.innerHTML = '<div class="error">Unable to load portfolio content. Please refresh the page or check content/site.json.</div>';
   console.error(error);
 }
+
