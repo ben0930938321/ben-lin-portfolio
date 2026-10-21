@@ -1,0 +1,44 @@
+{
+  "name": "Ben Lin",
+  "chineseName": "林家佑",
+  "discipline": "Architecture / Digital Design",
+  "bio": "My work explores architectural and digital design, from interventions in the urban fabric to the interfaces of a building envelope. This portfolio presents two projects from 2026.",
+  "tools": ["Rhino"],
+  "projects": [
+    {
+      "id": "port",
+      "number": "01",
+      "title": "Port City Vertical Park System",
+      "chineseTitle": "門埠計劃",
+      "category": "Graduation Design",
+      "year": "2026",
+      "type": "Individual project",
+      "role": "Architectural design",
+      "description": "How can a new urban system integrate into the existing fabric of a port city? This graduation project explores a vertical park system as an architectural intervention within the existing city.",
+      "cover": "assets/port-aerial.jpg",
+      "images": [
+        {"src": "assets/port-aerial.jpg", "caption": "01 / Aerial view — intervention within the existing urban fabric"},
+        {"src": "assets/port-perspectives.png", "caption": "02 / Street perspectives and elevated park spaces"},
+        {"src": "assets/port-section.png", "caption": "03 / Section — street, building and elevated landscape"}
+      ]
+    },
+    {
+      "id": "airport",
+      "number": "02",
+      "title": "Kaohsiung Airport Facade",
+      "chineseTitle": "高雄機場帷幕",
+      "category": "Facade Detail Study",
+      "year": "2026",
+      "type": "Team project",
+      "role": "Model making / Photography",
+      "description": "A collaborative detail design study of the interfaces between the entrance vestibule, curtain wall and canopy. My contribution focused on physical model making and photography, documenting the relationships between the facade elements.",
+      "cover": "assets/airport-front.jpg",
+      "images": [
+        {"src": "assets/airport-front.jpg", "caption": "01 / Front view — facade rhythm and entrance"},
+        {"src": "assets/airport-overview.jpg", "caption": "02 / Model overview — curtain wall and canopy"},
+        {"src": "assets/airport-canopy.jpg", "caption": "03 / Canopy and facade interface"},
+        {"src": "assets/airport-entry.jpg", "caption": "04 / Entrance vestibule detail"}
+      ]
+    }
+  ]
+}
